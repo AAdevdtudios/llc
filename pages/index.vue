@@ -251,7 +251,7 @@ let schedules = [
         >
           <a :href="`speakers/${speaker.name}`">
             <img
-              :src="`./assets/images/Speaker/${speaker.image}`"
+              :src="`${speaker.image}`"
               :alt="speaker.name"
               class="h-80 cursor-pointer hover:opacity-80"
             />

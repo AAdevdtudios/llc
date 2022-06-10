@@ -11,7 +11,7 @@ const speaker = data.find((name) => name.name === router.params.id);
       class="h-full bg-white rounded-2xl shadow-2xl shadow-slate-300 p-3 lg:p-10 flex gap-2 origin-top"
     >
       <img
-        :src="`../assets/images/Speaker/${speaker.image}`"
+        :src="`${speaker.image}`"
         :alt="speaker.name"
         class="w-80 h-80 bg-cover mr-2"
       />

@@ -13,7 +13,7 @@ import speakers from "@/data.json";
             class="h-full flex flex-nowrap p-3 rounded-md hover:shadow-2xl shadow-slate-300 transition-all ease-in-out duration-200"
           >
             <img
-              :src="`../assets/images/Speaker/${speaker.image}`"
+              :src="`${speaker.image}`"
               :alt="speaker.name"
               class="w-36 h-36 bg-cover mr-2"
             />
