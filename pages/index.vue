@@ -367,7 +367,7 @@ onMounted(() => {
       </div>
     </div>
   </section>
-  <div class="h-full px-5 lg:px-32 py-28" id="register">
+  <!-- <div class="h-full px-5 lg:px-32 py-28" id="register">
     <h2 class="font-bold text-3xl">
       <span class="border-b-4 border-black py-3">Register </span>now
     </h2>
@@ -393,7 +393,7 @@ onMounted(() => {
         <p class="cursor-pointer font-bold" @click="error = false">X</p>
       </span>
     </div>
-  </div>
+  </div> -->
   <section id="schedule" class="h-full px-5 lg:px-14">
     <div class="items-center w-full md:justify-center sm:justify-center sm:block py-14">
       <h2 class="text-4xl font-bold">
