@@ -1,5 +1,9 @@
 <script setup>
 import speakers from "@/data.json";
+import { watchEffect } from "vue";
+import dayjs from "dayjs";
+import ModalTailComponent1 from "../components/ModalTailComponent.vue";
+const apiConfig = useRuntimeConfig();
 
 let itemList = [
   " LLC hopes to reform and transform individuals to great minds",
@@ -134,17 +138,30 @@ let answer = ref("");
 let result = ref("");
 let error = ref("");
 let router = useRouter();
+const showModal = ref(false);
+const modalMessages = reactive({
+  header: "",
+  message: "",
+});
 async function validateEmail() {
   error.value = true;
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (email.value.match(regexEmail)) {
     result.value = "Email is valid";
     answer.value = true;
-
-    await fetch("https://localhost:44361/api/Members/identify?email=" + email.value)
+    const headers = {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    };
+    await fetch(apiConfig.api + "/Members/identify?email=" + email.value)
       .then((res) => res.json())
       .then((data) => {
-        window.location.href = data.url;
+        if (data.message == "Success") {
+          window.location.href = data.url;
+        }
+        showModal.value = true;
+        modalMessages.header = data.response;
+        modalMessages.message = data.message;
       });
   } else {
     result.value = "Email is not valid";
@@ -172,6 +189,45 @@ let schedules = [
     speaker: "Mustafizur Khan, SD Asia",
   },
 ];
+
+//Counter
+const days = reactive({
+  displayDays: 0,
+  displayHours: 0,
+  displayMinutes: 0,
+  displaySeconds: 0,
+});
+function changeModal() {
+  showModal.value = !showModal.value;
+}
+const seconds = ref(1000);
+const minutes = ref(seconds.value * 60);
+const hours = ref(minutes.value * 60);
+const daySet = ref(hours.value * 24);
+function counters() {
+  const timer = setInterval(() => {
+    const now = new Date();
+    const end = new Date(2022, 6, 9, 0, 0, 0, 0);
+    const distance = end.getTime() - now.getTime();
+    if (distance < 0) {
+      clearInterval(timer);
+      return;
+    }
+    const day = Math.floor(distance / daySet.value);
+    const hour = Math.floor((distance % daySet.value) / hours.value);
+    const minute = Math.floor((distance % hours.value) / minutes.value);
+    const second = Math.floor((distance % minutes.value) / seconds.value);
+    days.displayMinutes = minute < 10 ? "0" + minute : minute;
+    days.displaySeconds = second < 10 ? "0" + second : second;
+    days.displayHours = hour < 10 ? "0" + hour : hour;
+    days.displayDays = day < 10 ? "0" + day : day;
+  }, 1000);
+}
+
+onMounted(() => {
+  console.log();
+  counters();
+});
 </script>
 
 <template>
@@ -179,21 +235,70 @@ let schedules = [
     <div class="special"></div>
     <div class="center-element">
       <div class="intro">
-        <h1 class="header-center">LEADING IN SEASON OF DARKNESS AND CONFUSION</h1>
-        <p class="text-2xl font-light">RCCG RESURRECTION PARISH, LEKKI</p>
-        <p class="text-lg font-light">JULY 8TH, 2022 - JULY 9TH, 2022</p>
+        <h1 class="header-center mt-64 md:mt-20">
+          <span class="text-blue-300">LEADING IN SEASON</span> OF <br />
+          <span class="text-red-500">DARKNESS</span> AND
+          <span class="text-yellow-300">CONFUSION</span>
+        </h1>
+        <p class="text-lg mt-6 md:mt-2 md:text-4xl font-bold">
+          RCCG RESURRECTION PARISH, LEKKI
+        </p>
+        <p class="text-sm mt-5 md:text-xl font-bold">JULY 8TH, 2022 - JULY 9TH, 2022</p>
+        <div class="flex gap-7 md:flex md:gap-8 lg:gap-32 mt-10 mb-8">
+          <div class="rings">
+            <div class="rings-texts">
+              <span>{{ days.displayDays }}</span>
+            </div>
+            <img src="@/assets/images/new/rings/ring-1.png" alt="" class="h-full" />
+            <span class="text-sm lg:text-xl">Days</span>
+          </div>
+          <div class="rings">
+            <div class="rings-texts">
+              <span>{{ days.displayHours }}</span>
+            </div>
+            <img src="@/assets/images/new/rings/ring-2.png" alt="" class="h-full" />
+            <span class="text-sm lg:text-xl">Hours</span>
+          </div>
+          <div class="rings">
+            <div class="rings-texts">
+              <span>{{ days.displayMinutes }}</span>
+            </div>
+            <img src="@/assets/images/new/rings/ring-3.png" alt="" class="h-full" />
+            <span class="text-sm lg:text-xl">Minute</span>
+          </div>
+          <div class="rings">
+            <div class="rings-texts">
+              <span>{{ days.displaySeconds }}</span>
+            </div>
+            <img src="@/assets/images/new/rings/ring-1.png" alt="" class="h-full" />
+            <span class="text-sm lg:text-xl">Seconds</span>
+          </div>
+        </div>
         <br />
-        <div
+        <!-- <div
           class="transform h-fit bg-white w-min m-auto transition duration-500 hover:scale-100 rounded overflow-hidden p-2"
         >
           <a href="#register" class="text-black px-6 py-5 font-light text-2xl"
             >Register</a
           >
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
-  <section id="about" class="h-full px-5 lg:px-32 py-3 lg:py-0">
+  <section
+    id="about"
+    class="h-full px-5 lg:px-10 py-3 lg:py-0 bg-speaker relative overflow-hidden"
+  >
+    <img
+      src="@/assets/images/new/random/cross.svg"
+      alt=""
+      class="opacity-10 absolute top-10 left-40 h-32 w-32 rotate-45"
+    />
+    <img
+      src="@/assets/images/new/random/side-slide.svg"
+      alt=""
+      class="opacity-40 absolute top-1 right-1"
+    />
     <div class="sm:block lg:flex gap-3 lg:py-20">
       <div class="row-span-1 py-2 font-light">
         <h3 class="text-2xl font-bold font-sans pb-6">
@@ -289,7 +394,7 @@ let schedules = [
       </span>
     </div>
   </div>
-  <section id="schedule" class="h-full px-5 lg:px-32">
+  <section id="schedule" class="h-full px-5 lg:px-14">
     <div class="items-center w-full md:justify-center sm:justify-center sm:block py-14">
       <h2 class="text-4xl font-bold">
         <span class="border-b-4 border-black py-3">EVENT</span> SCHEDULE
@@ -317,13 +422,6 @@ let schedules = [
             Leadership Foundation, a foundation which has for more than ten years involved
             itself in activities aimed at reducing the leadership deficit that exists in
             literally all segments of the Nigerian society.
-          </p>
-          <p class="mt-5">
-            He has vast experience in training Leaders in Government, private sector,
-            youth, women and church leaders both locally and internationally. He is the
-            Convener of the Annual Lagos Leadership Conference ( LLC). He serves as
-            Regional Pastor of the Redeemed Christian Church of God having oversight of
-            more than 1500 churches.
           </p>
         </div>
         <div class="col-span-2">
@@ -361,8 +459,8 @@ let schedules = [
               @click="changeDate(index)"
             >
               <p
-                class="p-4 rounded-md text-white w-fit shadow-lg hover:bg-slate-900 cursor-pointer"
-                :class="speakerSchedule.active ? 'bg-slate-900' : 'bg-slate-500'"
+                class="p-4 rounded-md text-lg font-bold text-white w-fit shadow-lg hover:bg-blue-900 cursor-pointer"
+                :class="speakerSchedule.active ? ' bg-blue-900 ' : 'bg-blue-500'"
               >
                 {{ speakerSchedule.day }}
               </p>
@@ -379,8 +477,8 @@ let schedules = [
               @click="makeActive(indexSchedule, index)"
             >
               <div
-                class="mt-5 p-5 rounded-sm hover:bg-slate-900"
-                :class="speech.active ? 'bg-slate-900' : 'bg-slate-500 cursor-pointer'"
+                class="mt-5 p-5 rounded-sm hover:bg-blue-900"
+                :class="speech.active ? 'bg-blue-900' : 'bg-blue-400 cursor-pointer'"
               >
                 <div class="text-white">
                   <div class="flex items-center font-bold gap-3 text-white">
@@ -487,6 +585,21 @@ let schedules = [
       </div>
     </div>
   </section>
+  <div
+    v-if="showModal"
+    class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+  >
+    <ModalTailComponent1
+      @changeModal="changeModal"
+      :header="modalMessages.header"
+      :message="modalMessages.message"
+    />
+  </div>
+  <div
+    v-if="showModal"
+    class="opacity-25 fixed inset-0 z-40 bg-black"
+    v-on:click="changeModal"
+  ></div>
   <div class="h-full px-5 lg:px-32 py-28 md:block lg:grid grid-cols-3">
     <div>
       <h2 class="text-4xl font-bold">EVENT LOCATION</h2>
@@ -521,19 +634,25 @@ let schedules = [
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: rgba(0, 0, 0, 0.49);
+}
+.rings {
+  @apply h-14 md:h-20 lg:h-32 lg:w-32 relative text-xl md:text-4xl font-bold text-center;
+}
+.rings-texts {
+  @apply left-0 top-0 text-lg md:text-4xl h-full w-full p-3 md:p-5 lg:p-10 text-center m-auto absolute;
 }
 .background-design {
   @apply h-screen bg-hero bg-no-repeat bg-cover w-full relative;
 }
 .intro {
-  @apply w-full relative top-5 left-0 text-center text-white  tracking-widest;
+  @apply w-full relative top-0 left-0 text-left pl-5 lg:pl-10 text-white  tracking-widest;
 }
 .header-center {
-  @apply uppercase text-4xl w-full font-Montserrat text-white font-bold  mt-1 h-full;
+  @apply uppercase text-4xl md:text-8xl w-full font-Montserrat text-white font-bold h-full;
 }
 .center-element {
-  @apply flex items-center h-screen overscroll-none;
+  @apply flex items-center h-2/3 md:h-3/4 lg:h-screen overscroll-none;
 }
 .animation {
   @apply bg-white text-black px-6 py-3 font-light h-fit transform transition duration-500 hover:scale-125;

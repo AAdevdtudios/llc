@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import speakers from "@/data.json";
+useMeta({
+  title: "Speakers",
+});
 </script>
 
 <template>

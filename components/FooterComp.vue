@@ -1,6 +1,6 @@
 <template>
   <slot />
-  <footer class="bg-black text-white p-20">
+  <footer class="bg-slate-800 text-white p-20">
     <div class="container">
       <div class="flex items-center justify-center">
         <div class="col-md-12">

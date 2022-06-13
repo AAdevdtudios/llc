@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-c2c91aad.mjs",
+    "file": "entry-af31dbb6.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -27,7 +27,7 @@
     ]
   },
   "pages/alreadyExist.vue": {
-    "file": "alreadyExist-4cef6d8c.mjs",
+    "file": "alreadyExist-7c617185.mjs",
     "src": "pages/alreadyExist.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -35,19 +35,19 @@
     ]
   },
   "pages/index.vue": {
-    "file": "index-3cbf2f6e.mjs",
+    "file": "index-310f19ff.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_data-a2367d54.mjs"
+      "_data-ea67643b.mjs"
     ]
   },
-  "_data-a2367d54.mjs": {
-    "file": "data-a2367d54.mjs"
+  "_data-ea67643b.mjs": {
+    "file": "data-ea67643b.mjs"
   },
   "pages/register.vue": {
-    "file": "register-1e332079.mjs",
+    "file": "register-64aa20ca.mjs",
     "src": "pages/register.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -55,25 +55,25 @@
     ]
   },
   "pages/speakers/[id].vue": {
-    "file": "_id_-4d381805.mjs",
+    "file": "_id_-c9afb8c9.mjs",
     "src": "pages/speakers/[id].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_data-a2367d54.mjs"
+      "_data-ea67643b.mjs"
     ]
   },
   "pages/speakers/index.vue": {
-    "file": "index-f44d838e.mjs",
+    "file": "index-75d3e988.mjs",
     "src": "pages/speakers/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_data-a2367d54.mjs",
-      "node_modules/nuxt/dist/app/entry.mjs"
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_data-ea67643b.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "default-4990ebb3.mjs",
+    "file": "default-6f6db5ff.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [

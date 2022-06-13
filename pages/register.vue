@@ -3,8 +3,10 @@ import { reactive, ref } from "vue";
 import { object, string, ref as yupRef, bool } from "yup";
 import { configure } from "vee-validate";
 import { date } from "yup/lib/locale";
+import ModalTailComponent1 from "../components/ModalTailComponent.vue";
 let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let phoneRegex = /^[0-9]+$/;
+const apiConfig = useRuntimeConfig();
 
 const debug = ref(false);
 
@@ -18,7 +20,7 @@ configure({
   validateOnModelUpdate: true, // controls if `update:modelValue` events should trigger validation with `handleChange` handler
 });
 const appearances = ref("Physical");
-const attendanceDates = ref("8th Only");
+const attendanceDates = ref("July-8th-2022 Only");
 const titles = ref("Mr");
 
 const schema = object({
@@ -50,21 +52,33 @@ const initialValues = {
   address: "",
   attendanceDate: "free",
 };
+const showModal = ref(false);
+const modalMessages = reactive({
+  header: "",
+  message: "",
+});
+function changeModal() {
+  showModal.value = !showModal.value;
+}
 
 async function sendToDb(val) {
   const headers = {
     Accept: "application/json",
     "Content-Type": "application/json",
   };
-  await fetch("https://localhost:44361/api/Members", {
+  await fetch(apiConfig.api + "/Members", {
     method: "POST",
     body: JSON.stringify(val),
     headers,
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      window.location.href = data.url;
+      // if (data.message == "Success") {
+      //   window.location.href = data.url;
+      // }
+      showModal.value = true;
+      modalMessages.header = data.response;
+      modalMessages.message = data.message;
     });
 }
 
@@ -80,12 +94,44 @@ const handleSubmit = (values, actions) => {
 };
 </script>
 <template>
-  <div class="h-full p-5 mt-6 lg:mt-0 lg:p-20">
-    <div class="h-full bg-white rounded-2xl shadow-2xl shadow-slate-300 p-3 lg:p-10">
+  <div
+    v-if="showModal"
+    class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+  >
+    <ModalTailComponent1
+      @changeModal="changeModal"
+      :header="modalMessages.header"
+      :message="modalMessages.message"
+    />
+  </div>
+  <div
+    v-if="showModal"
+    class="opacity-25 fixed inset-0 z-40 bg-black"
+    v-on:click="changeModal"
+  ></div>
+  <div class="h-full p-5 mt-10 lg:mt-20 lg:p-20 bg-speaker relative">
+    <img
+      src="@/assets/images/new/random/cross.svg"
+      alt=""
+      class="opacity-10 absolute top-10 left-10 h-32 w-32 rotate-45 z-0"
+    />
+    <img
+      src="@/assets/images/new/random/cross.svg"
+      alt=""
+      class="opacity-10 absolute top-10 right-10 h-32 w-32 rotate-45 z-0"
+    />
+    <img
+      src="@/assets/images/new/random/cross.svg"
+      alt=""
+      class="opacity-25 absolute top-52 right-10 h-20 w-20 z-0"
+    />
+    <div
+      class="h-full bg-white rounded-2xl shadow-2xl shadow-slate-300 p-1 lg:p-5 relative overflow-clip"
+    >
       <br />
-      <h2 class="font-bold font-Nunito text-xl lg:text-5xl">Register</h2>
+      <h2 class="font-bold mt-6 lg:mt-0 text-4xl lg:text-8xl">Register</h2>
       <br />
-      <span>Please fill the above information</span>
+      <span class="font-bold lg:text-3xl">Please fill the above information</span>
       <VForm
         class="card p-5"
         :validation-schema="schema"
@@ -181,9 +227,9 @@ const handleSubmit = (values, actions) => {
               class="inputStyle cursor-pointer"
               v-model="attendanceDates"
             >
-              <option selected value="8th Only">8th Only</option>
-              <option selected value="9th Only">9th Only</option>
-              <option value="8th - 9th">Both event</option>
+              <option selected value="July-8th-2022 Only">July-8th-2022 Only</option>
+              <option selected value="July-9th-2022 Only">July-9th-2022 Only</option>
+              <option value="July-8th-2022 - July-9th-2022">Both event</option>
             </select>
           </div>
           <div class="col-span-1 flex flex-col">
@@ -204,11 +250,11 @@ const handleSubmit = (values, actions) => {
         <div class="inputStyle mb-5 bg-slate-500">
           <span class="text-white font-medium text-lg">
             {{
-              attendanceDates == "8th Only"
+              attendanceDates == "July-8th-2022 Only"
                 ? "Free"
                 : appearances == "Physical"
-                ? "3000"
-                : "5000"
+                ? "5000"
+                : "2000"
             }}
           </span>
         </div>
@@ -244,7 +290,7 @@ const handleSubmit = (values, actions) => {
 
 <style>
 .labelTitle {
-  @apply font-medium text-lg text-slate-500;
+  @apply font-bold text-2xl text-slate-500;
 }
 .inputStyle {
   @apply w-full border-2 rounded-lg p-3 border-slate-100 outline-none mt-5;

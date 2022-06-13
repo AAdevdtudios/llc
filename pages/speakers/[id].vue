@@ -6,9 +6,9 @@ const speaker = data.find((name) => name.name === router.params.id);
 </script>
 
 <template>
-  <div class="h-full p-5 mt-6 lg:mt-0 lg:p-20">
+  <div class="h-full p-5 mt-6 lg:mt-0 lg:p-20 bg-speaker">
     <div
-      class="h-full bg-white rounded-2xl shadow-2xl shadow-slate-300 p-3 lg:p-10 flex gap-2 origin-top"
+      class="h-full bg-white rounded-2xl shadow-2xl shadow-slate-300 p-3 lg:p-10 lg:flex gap-2 origin-top"
     >
       <img
         :src="`${speaker.image}`"
