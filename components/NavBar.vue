@@ -55,7 +55,7 @@
             </li>
             <li v-for="(tag, index) in tags" :key="tag" :index="index">
               <a
-                :href="`/#${tag}`"
+                :href="tag != 'register' ? `/#${tag}` : '/register'"
                 class="transition-all duration-200 ease-in-out border-opacity-2"
                 :class="
                   tag == currentSection
