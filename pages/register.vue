@@ -69,7 +69,6 @@ async function sendToDb(val) {
   await fetch(apiConfig.api + "/Members", {
     method: "POST",
     body: JSON.stringify(val),
-    headers,
   })
     .then((response) => response.json())
     .then((data) => {

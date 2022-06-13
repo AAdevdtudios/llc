@@ -432,9 +432,9 @@ onMounted(() => {
           </p>
           <hr />
           <span>
-            Samson Ajetumobi <br />
             E. A. Odeyemi <br />
-            Charles Kpandei <br />
+            Samson Ajetumobi <br />
+            Odeh Akatu<br />
           </span>
           <p class="font-bold mt-5">
             <span class="text-xl">SATURDAY JULY 9, 2022 </span><br />
@@ -444,13 +444,10 @@ onMounted(() => {
           <hr />
           <span>
             Charles Kpandei <br />
-            Agu Irukwu <br />
-            Yemi Adedeji <br />
-            Harbert Wigwe <br />
-            Ola Brown <br />
+            Ade Ayeyemi<br />
             Jumoke Adenowo <br />
-            Ade Ayeyemi</span
-          >
+            Ola Brown <br />
+          </span>
 
           <!-- <div class="flex gap-4 transition-all duration-200 ease-in-out">
             <div
