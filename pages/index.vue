@@ -153,7 +153,7 @@ async function validateEmail() {
       Accept: "application/json",
       "Content-Type": "application/json",
     };
-    await fetch(apiConfig.api + "/Members/identify?email=" + email.value)
+    await fetch("https://llcapi.herokuapp.com/api/Members/identify?email=" + email.value)
       .then((res) => res.json())
       .then((data) => {
         if (data.message == "Success") {
