@@ -348,21 +348,22 @@ onMounted(() => {
       <h2 class="text-4xl font-bold">
         <span class="border-b-4 border-black py-3">Speakers</span>
       </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 items-center mt-11 gap-y-3">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 items-center mt-11 gap-y-3">
         <div
-          class="flex flex-col h-auto w-80 gap-2 justify-center items-center"
+          class="flex flex-col h-auto w-80 gap-2 justify-center items-center uppercase"
           v-for="speaker in speakers"
           :key="speaker.id"
         >
-          <a :href="`speakers/${speaker.name}`">
-            <img
-              :src="`${speaker.image}`"
-              :alt="speaker.name"
-              class="h-80 cursor-pointer hover:opacity-80"
-            />
-            <h1 class="font-bold text-xl">{{ speaker.name }}</h1>
-            <h3 class="font-light">{{ speaker.profession }}</h3></a
-          >
+          <!-- <a :href="`speakers/${speaker.name}`"> -->
+          <img
+            :src="`${speaker.image}`"
+            :alt="speaker.name"
+            class="h-80 cursor-pointer hover:opacity-80"
+          />
+          <h1 class="font-bold text-xl">{{ speaker.name }}</h1>
+          <h3 class="font-light">{{ speaker.profession }}</h3>
+          <!-- </a
+          > -->
         </div>
       </div>
     </div>

@@ -1,38 +1,58 @@
 
 [
     {
-        "id":2,
-        "name":"PASTOR E.A. ODEYEMI",
+        "id":1,
+        "name":"E.A. ODEYEMI",
         "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/ODEYEMI.png?alt=media&token=a212015b-d8fe-478f-b6ed-1137d958a057",
         "description":" is a member of the Governing Council of the Redeemed Christian church of God. He is the Assistant General Overseer (AGO) Education and Training), and the Pastor-in-Charge of Region 10 with Headquarters in Abuja, Nigeria.",
-        "content": "Pastor Ezekiel A. Odeyemi is a member of the Governing Council of the Redeemed Christian church of God. He is the Assistant General Overseer (AGO) Education and Training), and the Pastor-in-Charge of Region 10 with Headquarters in Abuja, Nigeria. Since 1988, he has been involved in Christ the Redeemer’s Ministry and he is the Vice President (Admin/Evangelism unit). Pastor Ezekiel A. Odeyemi is a member of the Governing Council of the Redeemed Christian church of God. He is the Assistant General Overseer (AGO) Education and Training), and the Pastor-in-Charge of Region 10 with Headquarters in Abuja, Nigeria. He brings a wealth of Experience spanning over three decades in administration, youth ministry, training and development. He is an alumni of international leadership institute (ILI USA)."
+        "content": "Ezekiel A. ODEYEMI is a member of the Governing Council of the Redeemed Christian church of God. He is the Assistant General Overseer (AGO) Education and Training), and the Pastor-in-Charge of Region 10 with Headquarters in Abuja, Nigeria. Since 1988, he has been involved in Christ the Redeemer’s Ministry and he is the Vice President (Admin/Evangelism unit). Pastor Ezekiel A. Odeyemi is a member of the Governing Council of the Redeemed Christian church of God. He is the Assistant General Overseer (AGO) Education and Training), and the Pastor-in-Charge of Region 10 with Headquarters in Abuja, Nigeria. He brings a wealth of Experience spanning over three decades in administration, youth ministry, training and development. He is an alumni of international leadership institute (ILI USA)."
     },
     {
-        "id": 4,
-        "name": "REV. SAMSON AJETOMOBI",
-        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/AJETOMOBI.png?alt=media&token=68083b61-31f4-4a81-9b43-961db124a92f",
+        "id": 2,
+        "name": "SAMSON AJETOMOBI",
+        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FSamson.png?alt=media&token=63dce108-f9e2-4a54-9111-afe577c82a51",
         "description":" is a renowned minister of the word of God. He is the President and Founder of the Men of Issachar Vision Inc. with the headquarters in Ibadan, Nigeria. He is widely travelled around the nations of the world, preaching, teaching and training church leaders. A missionary at heart, he has authored several books including Not Offended, Running Well, The Light Bearers among others.",
-        "content":"Rev Ajetomobi is a renowned minister of the word of God. He is the President and Founder of the Men of Issachar Vision Inc. with the headquarters in Ibadan, Nigeria. He is widely travelled around the nations of the world, preaching, teaching and training church leaders. A missionary at heart, he has authored several books including Not Offended, Running Well, The Light Bearers among others. He is a man called by God with the mandate to challenge the church to her responsibilities. He is gripped with a great passion for souls in reaching the unreached at all cost. Since the inception of the ministry, with his strong drive, he has helped several lives discover the essence of living for God. He is much sought after at conferences, crusades and church revivals. Because of his leadership thrust, he is involved with the leadership of several Christian organizations and mission agencies. Rev Samson is an Agricultural Engineer by training is currently the PFN Chairman, Oyo State Chapter. He is married to Rev Stella Ajetomobi and they are blessed with four children."
+        "content":"SAMSON AJETOMOBI is a renowned minister of the word of God. He is the President and Founder of the Men of Issachar Vision Inc. with the headquarters in Ibadan, Nigeria. He is widely travelled around the nations of the world, preaching, teaching and training church leaders. A missionary at heart, he has authored several books including Not Offended, Running Well, The Light Bearers among others. He is a man called by God with the mandate to challenge the church to her responsibilities. He is gripped with a great passion for souls in reaching the unreached at all cost. Since the inception of the ministry, with his strong drive, he has helped several lives discover the essence of living for God. He is much sought after at conferences, crusades and church revivals. Because of his leadership thrust, he is involved with the leadership of several Christian organizations and mission agencies. Rev Samson is an Agricultural Engineer by training is currently the PFN Chairman, Oyo State Chapter. He is married to Rev Stella Ajetomobi and they are blessed with four children."
     },
-    
     {
-        "id": 1,
-        "name": "ADE AYEYEMI",
-        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/Ayeyemi.png?alt=media&token=d49f559e-09cf-4157-9873-083a9e52d615",
+        "id": 3,
+        "name": "ODEH AKATU",
+        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FAkatu.png?alt=media&token=1ddc0643-65ba-440a-87d0-14bbfdb70d57",
         "description": ", was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg.",
         "content":"Ade Ayeyemi, was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg. Ade is an accounting graduate of the University of Ife, now Obafemi Awolowo University, Ile-Ife, Nigeria, where he earned a Bachelor of Science degree with First Class Honours. He also studied at the University of London and is an alumnus of the Harvard Business School’s Advanced Management Programme. A Chartered Accountant, he is also a trained UNIX Administrator and Network Operating Systems Manager. His many interests include business strategy, economics, process engineering and technology."
     },
     {
-        "id":5,
-        "name":"DR (MRS) OLA BROWN",
-        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/OlaBrown.png?alt=media&token=8c9a920d-c350-47db-baf7-4e665afe6058",
+        "id": 4,
+        "name": "CHARLES KPANDEI",
+        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FKpandei.png?alt=media&token=9829dfce-1465-426e-a089-0b93d944d282",
+        "description": ", was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg.",
+        "content":"Ade Ayeyemi, was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg. Ade is an accounting graduate of the University of Ife, now Obafemi Awolowo University, Ile-Ife, Nigeria, where he earned a Bachelor of Science degree with First Class Honours. He also studied at the University of London and is an alumnus of the Harvard Business School’s Advanced Management Programme. A Chartered Accountant, he is also a trained UNIX Administrator and Network Operating Systems Manager. His many interests include business strategy, economics, process engineering and technology."
+    },
+    {
+        "id": 5,
+        "name": "CECILIA BOLAJI DADA",
+        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FCecilia.png?alt=media&token=f6c02875-4728-4f14-94a8-f93c81dd83da",
+        "description": ", was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg.",
+        "content":"Ade Ayeyemi, was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg. Ade is an accounting graduate of the University of Ife, now Obafemi Awolowo University, Ile-Ife, Nigeria, where he earned a Bachelor of Science degree with First Class Honours. He also studied at the University of London and is an alumnus of the Harvard Business School’s Advanced Management Programme. A Chartered Accountant, he is also a trained UNIX Administrator and Network Operating Systems Manager. His many interests include business strategy, economics, process engineering and technology."
+    },
+    {
+        "id": 6,
+        "name": "ADE AYEYEMI",
+        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FAyeyemi.png?alt=media&token=5d11e10f-3730-42e9-a91e-d9bbdb36beef",
+        "description": ", was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg.",
+        "content":"Ade Ayeyemi, was appointed Group Chief Executive Officer of Ecobank in June 2015 and assumed office on September 1, 2015. He is an experienced banker, who before joining Ecobank, had a long and successful career with Citigroup, where he was CEO of Citigroup’s sub-Saharan Africa division based in Johannesburg. Ade is an accounting graduate of the University of Ife, now Obafemi Awolowo University, Ile-Ife, Nigeria, where he earned a Bachelor of Science degree with First Class Honours. He also studied at the University of London and is an alumnus of the Harvard Business School’s Advanced Management Programme. A Chartered Accountant, he is also a trained UNIX Administrator and Network Operating Systems Manager. His many interests include business strategy, economics, process engineering and technology."
+    },
+    {
+        "id":7,
+        "name":"OLA BROWN",
+        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FBrown.png?alt=media&token=c2da0e8f-bcf0-4365-8396-ba2fc5951685",
         "description":", née Orekunrin (born 1986), is a British-Nigerian medical doctor, healthcare entrepreneur and founder of the Flying Doctors Healthcare Investment Group and a director of Greentree Investment Company. Flying Doctors Healthcare Group is active in air ambulance services, consulting/healthcare technology, hospital/clinic construction, diagnostics and equipment, health facility management and pharmaceutical retail.",
         "content":"Olamide Brown, née Orekunrin (born 1986), is a British-Nigerian medical doctor, healthcare entrepreneur and founder of the Flying Doctors Healthcare Investment Group and a director of Greentree Investment Company. Flying Doctors Healthcare Group is active in air ambulance services, consulting/healthcare technology, hospital/clinic construction, diagnostics and equipment, health facility management and pharmaceutical retail. Brown is a proficient motivational speaker who had inspired many with her talks. She is married and blessed with children. Her awards include; World Economic Forum (WEF) Young Global Leader, Forbes 20 Young Power Women In Africa 2013, Forbes Africa's 30 Under 30 for 2015, YWomen – YNaija 100 Most Influential Women in Nigeria 2015, Silverbird Group Extraordinary Business Achievement Award, 2018 in Lagos, the youngest person ever to win this award, YNaija Business Power List 2020, Silverbird Group Extraordinary Business Achievement Award, 2018 in Lagos(she is and the youngest person ever to win this award)."
     },
     {
-        "id":6,
-        "name":"Charles Duunebari Kpandei",
-        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/pastorcharleskpandei.jpg?alt=media&token=77357e2a-d956-4a99-9ce2-e17277802007",
+        "id":8,
+        "name":"YEMI ADEDEJI",
+        "image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FAdedeji.png?alt=media&token=56a4030d-af3a-453a-b715-dad11640b893",
         "description":" is the Lead consultant of the Bonmenebari Leadership Institute and a consummate Leader and trainer. A graduate of the University of Benin in Accounting",
         "content":"Charles Duunebari Kpandei is the Lead consultant of the Bonmenebari Leadership Institute and a consummate Leader and trainer. A graduate of the University of Benin in Accounting, He is an alumnus of the Lagos Business school (AMP) and the Haggai Institute in Hawaii. He has over two decades management level Banking experience in various areas in the Bank of Credit and Commerce International (BCCI, later African International Bank, AIB) and Fortune International Bank where he left as Deputy General Manager, Corporate Resources."
     }
