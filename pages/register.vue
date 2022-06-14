@@ -129,7 +129,7 @@ const handleSubmit = (values, actions) => {
       class="h-full bg-white rounded-2xl shadow-2xl shadow-slate-300 p-1 lg:p-5 relative overflow-clip"
     >
       <br />
-      <h2 class="font-bold mt-6 lg:mt-0 text-4xl lg:text-8xl">Register</h2>
+      <h2 class="font-bold mt-6 lg:mt-0 text-4xl lg:text-5xl">Register</h2>
       <br />
       <span class="font-bold lg:text-3xl">Please fill the above information</span>
       <VForm
