@@ -44,7 +44,7 @@ const props = defineProps({
               theme ‘Leading in season of Darkness & Confussion’. <br />If you are yet to
               make payment, kindly pay your participation fee so we can reserve your spot.
               The scheduled Fees are show below: <br />
-              Virtual Fee: N2,000.00 (Two Thousand Naira Only) <br />
+              Virtual Fee: N3,000.00 (Two Thousand Naira Only) <br />
               Onsite (Physical) Fee: N5,000.00 (Five Thousand Naira Only) <br />All
               payments should be made to the following account:<br />
               Account Name: <span class="font-bold">Bonmenabari Leadership Limited</span

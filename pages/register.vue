@@ -254,7 +254,7 @@ const handleSubmit = (values, actions) => {
                 ? "Free"
                 : appearances == "Physical"
                 ? "5000"
-                : "2000"
+                : "3000"
             }}
           </span>
         </div>
