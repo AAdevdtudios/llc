@@ -445,7 +445,7 @@ onMounted(() => {
           <span>
             Charles Kpandei <br />
             Ade Ayeyemi<br />
-            Jumoke Adenowo <br />
+            <!-- Jumoke Adenowo <br /> -->
             Ola Brown <br />
           </span>
 
@@ -603,9 +603,9 @@ onMounted(() => {
       <br />
       <address class="gap-1 mb-3 lg:mb-0">
         <p>
-          Some place<br />
-          The Some Hall<br />
-          House # 08, Road #52, Street<br />
+          1st Gate Jakande Estate,<br />
+          KM 15 Lekki-Express Way, Nigeria., Lekki<br />
+          Venu: RCCG Resurrection Lekki<br />
           Phone: +234 802 291 3883<br />
           Email: enquiry@llconference.com
         </p>
@@ -613,8 +613,8 @@ onMounted(() => {
     </div>
     <div class="col-span-2">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3358.374257736756!2d-97.05776737233124!3d32.67609202023925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e885e45bc67f7%3A0x86eacd7b88ce0cd0!2sRCCG%20Grace%20Chapel!5e0!3m2!1sen!2sbd!4v1653039725656!5m2!1sen!2sbd"
-        width="100%"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.2903570411036!2d3.496100344041662!3d6.434473534213048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf67f3c217b09%3A0x80b6d4e0716dbc58!2sRCCG%20Resurrection%20Lekki!5e0!3m2!1sen!2sng!4v1655198213765!5m2!1sen!2sng"
+        width="600"
         height="450"
         style="border: 0"
         allowfullscreen=""
@@ -646,7 +646,7 @@ onMounted(() => {
   @apply w-full relative top-0 left-0 text-left pl-5 lg:pl-10 text-white  tracking-widest;
 }
 .header-center {
-  @apply uppercase text-4xl md:text-8xl w-full font-Montserrat text-white font-bold h-full;
+  @apply uppercase text-4xl md:text-7xl w-full font-Montserrat text-white font-bold h-full;
 }
 .center-element {
   @apply flex items-center h-2/3 md:h-3/4 lg:h-screen overscroll-none;
