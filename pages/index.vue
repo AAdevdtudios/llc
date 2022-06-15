@@ -360,8 +360,9 @@ onMounted(() => {
             :alt="speaker.name"
             class="h-80 cursor-pointer hover:opacity-80"
           />
-          <h1 class="font-bold text-xl">{{ speaker.name }}</h1>
-          <h3 class="font-light">{{ speaker.profession }}</h3>
+          <h1 class="font-bold text-xl text-cyan-500">{{ speaker.name }}</h1>
+          <h3 class="font-bold text-center">{{ speaker.title }}</h3>
+          <h3 class="font-bold text-center">{{ speaker.company }}</h3>
           <!-- </a
           > -->
         </div>
