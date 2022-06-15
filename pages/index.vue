@@ -343,14 +343,14 @@ onMounted(() => {
   <div class="h-96 bg-green-900 w-full bg-facts bg-cover relative">
     <div class="special"></div>
   </div>
-  <section id="speakers" class="h-full px-5 lg:px-32">
+  <section id="speakers" class="h-full px-5 lg:px-10 bg-speaker">
     <div class="items-center w-full md:justify-center sm:justify-center lg:block py-14">
       <h2 class="text-4xl font-bold">
         <span class="border-b-4 border-black py-3">Speakers</span>
       </h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 items-center mt-11 gap-y-3">
         <div
-          class="flex flex-col h-auto w-80 gap-2 justify-center items-center uppercase"
+          class="flex flex-col h-auto w-80 gap-2 justify-center items-center uppercase mt-5"
           v-for="speaker in speakers"
           :key="speaker.id"
         >
@@ -361,8 +361,10 @@ onMounted(() => {
             class="h-80 cursor-pointer hover:opacity-80"
           />
           <h1 class="font-bold text-xl text-cyan-500">{{ speaker.name }}</h1>
-          <h3 class="font-bold text-center">{{ speaker.title }}</h3>
-          <h3 class="font-bold text-center">{{ speaker.company }}</h3>
+          <h3 class="font-bold text-center capitalize text-xl">{{ speaker.title }}</h3>
+          <h3 class="font-bold text-center capitalize text-base">
+            {{ speaker.company }}
+          </h3>
           <!-- </a
           > -->
         </div>
