@@ -443,6 +443,7 @@ onMounted(() => {
             E. A. Odeyemi <br />
             Samson Ajetumobi <br />
             Odeh Akatu<br />
+            Charles Kpandei <br />
           </span>
           <p class="font-bold mt-5">
             <span class="text-xl">SATURDAY JULY 9, 2022 </span><br />
@@ -451,10 +452,10 @@ onMounted(() => {
           </p>
           <hr />
           <span>
-            Charles Kpandei <br />
+            CECILIA BOLAJI DADA<br />
             Ade Ayeyemi<br />
             <!-- Jumoke Adenowo <br /> -->
-            Ola Brown <br />
+            YEMI ADEDEJI <br />
           </span>
 
           <!-- <div class="flex gap-4 transition-all duration-200 ease-in-out">
@@ -663,3 +664,24 @@ onMounted(() => {
   @apply bg-white text-black px-6 py-3 font-light h-fit transform transition duration-500 hover:scale-125;
 }
 </style>
+
+// { // "id":7, // "name":"OLA BROWN", // "title": "Founder,", // "company": "Flying
+Doctors Healthcare Group", //
+"image":"https://firebasestorage.googleapis.com/v0/b/imagestores-73682.appspot.com/o/New%20Files%2FBrown.png?alt=media&token=c2da0e8f-bcf0-4365-8396-ba2fc5951685",
+// "description":", née Orekunrin (born 1986), is a British-Nigerian medical doctor,
+healthcare entrepreneur and founder of the Flying Doctors Healthcare Investment Group and
+a director of Greentree Investment Company. Flying Doctors Healthcare Group is active in
+air ambulance services, consulting/healthcare technology, hospital/clinic construction,
+diagnostics and equipment, health facility management and pharmaceutical retail.", //
+"content":"Olamide Brown, née Orekunrin (born 1986), is a British-Nigerian medical doctor,
+healthcare entrepreneur and founder of the Flying Doctors Healthcare Investment Group and
+a director of Greentree Investment Company. Flying Doctors Healthcare Group is active in
+air ambulance services, consulting/healthcare technology, hospital/clinic construction,
+diagnostics and equipment, health facility management and pharmaceutical retail. Brown is
+a proficient motivational speaker who had inspired many with her talks. She is married and
+blessed with children. Her awards include; World Economic Forum (WEF) Young Global Leader,
+Forbes 20 Young Power Women In Africa 2013, Forbes Africa's 30 Under 30 for 2015, YWomen –
+YNaija 100 Most Influential Women in Nigeria 2015, Silverbird Group Extraordinary Business
+Achievement Award, 2018 in Lagos, the youngest person ever to win this award,
+YNaija Business Power List 2020, Silverbird Group Extraordinary Business Achievement
+Award, 2018 in Lagos(she is and the youngest person ever to win this award)." // },
