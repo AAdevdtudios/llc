@@ -361,8 +361,10 @@ onMounted(() => {
             class="h-80 cursor-pointer hover:opacity-80"
           />
           <h1 class="font-bold text-xl text-cyan-500">{{ speaker.name }}</h1>
-          <h3 class="font-bold text-center capitalize text-xl">{{ speaker.title }}</h3>
-          <h3 class="font-bold text-center capitalize text-base">
+          <h3 class="font-bold text-center capitalize text-xl tracking-tighter">
+            {{ speaker.title }}
+          </h3>
+          <h3 class="font-bold text-center capitalize text-base tracking-tighter">
             {{ speaker.company }}
           </h3>
           <!-- </a
@@ -398,7 +400,7 @@ onMounted(() => {
       </span>
     </div>
   </div> -->
-  <section id="schedule" class="h-full px-5 lg:px-14">
+  <section id="schedule" class="h-full px-5 lg:px-14 bg-gray-50">
     <div class="items-center w-full md:justify-center sm:justify-center sm:block py-14">
       <h2 class="text-4xl font-bold">
         <span class="border-b-4 border-black py-3">EVENT</span> SCHEDULE
@@ -431,7 +433,9 @@ onMounted(() => {
         <div class="col-span-2">
           <p class="font-bold">
             <span class="text-xl">FRIDAY JULY 8, 2022</span><br />
-            <span class="text-3xl">CHRUCH LEADERS SUMMIT</span><br />
+            <span class="text-3xl"
+              >CHRUCH <span class="text-blue-300">LEADERS</span> SUMMIT</span
+            ><br />
             <span class="text-xl mb-2">SPEAKERS</span> <br />
           </p>
           <hr />
