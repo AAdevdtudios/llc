@@ -19,6 +19,8 @@ module.exports = {
         fontFamily: {
           'Montserrat': ['Montserrat', 'sans-serif'],
           'Nunito': ['Nunito', 'sans-serif'],
+          'Kanit': ['Kanit', 'sans-serif'],
+          'Open-Sans': ['Open Sans', 'sans-serif'],
         },
       },
     },

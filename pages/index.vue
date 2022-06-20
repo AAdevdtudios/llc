@@ -401,12 +401,12 @@ onMounted(() => {
     </div>
   </div> -->
   <section id="schedule" class="h-full px-5 lg:px-14 bg-gray-50">
-    <div class="items-center w-full md:justify-center sm:justify-center sm:block py-14">
-      <h2 class="text-4xl font-bold">
-        <span class="border-b-4 border-black py-3">EVENT</span> SCHEDULE
-      </h2>
-      <div class="lg:grid sm:block md:grid-cols-4 gap-2 justify-between mt-10">
+    <div class="items-center w-full md:justify-center sm:justify-center sm:block py-4">
+      <div class="lg:grid sm:block md:grid-cols-4 gap-2 justify-between mt-4">
         <div class="col-span-2">
+          <h2 class="text-4xl font-bold mb-10">
+            <span class="border-b-4 border-black py-3">ABOUT</span> Convener
+          </h2>
           <img
             src="@/assets/images/Speaker/pastorcharleskpandei.jpg"
             alt="pastorcharleskpandei"
@@ -431,31 +431,36 @@ onMounted(() => {
           </p>
         </div>
         <div class="col-span-2">
+          <h2 class="text-4xl font-bold mb-10">
+            <span class="border-b-4 border-black py-3">EVENT</span> SCHEDULE
+          </h2>
           <p class="font-bold">
             <span class="text-xl">FRIDAY JULY 8, 2022</span><br />
-            <span class="text-3xl"
-              >CHRUCH <span class="text-blue-300">LEADERS</span> SUMMIT</span
+            <span class="text-3xl text-red-700 font-bold font-Open-Sans tracking-wide"
+              >CHRUCH LEADERS SUMMIT</span
             ><br />
             <span class="text-xl mb-2">SPEAKERS</span> <br />
           </p>
           <hr />
-          <span>
-            E. A. Odeyemi <br />
-            Samson Ajetumobi <br />
-            Odeh Akatu<br />
-            Charles Kpandei <br />
+          <span class="font-bold flex flex-col gap-2 mt-2">
+            <span>E. A. Odeyemi</span>
+            <span>Samson Ajetumobi</span>
+            <span>Odeh Akatu</span>
+            <span>Charles Kpandei</span>
           </span>
           <p class="font-bold mt-5">
             <span class="text-xl">SATURDAY JULY 9, 2022 </span><br />
-            <span class="text-3xl">INTERACTIVE ROUNDTABLE</span><br />
+            <span class="text-3xl text-red-700 font-bold font-Open-Sans tracking-wide"
+              >INTERACTIVE ROUNDTABLE</span
+            ><br />
             <span class="text-xl mb-2">SPEAKERS</span> <br />
           </p>
           <hr />
-          <span>
-            CECILIA BOLAJI DADA<br />
-            Ade Ayeyemi<br />
+          <span class="font-bold flex flex-col gap-2 mt-2">
+            <span>CECILIA BOLAJI DADA</span>
+            <span>Ade Ayeyemi</span>
             <!-- Jumoke Adenowo <br /> -->
-            YEMI ADEDEJI <br />
+            <span>YEMI ADEDEJI</span>
           </span>
 
           <!-- <div class="flex gap-4 transition-all duration-200 ease-in-out">

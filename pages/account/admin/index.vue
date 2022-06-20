@@ -6,19 +6,23 @@
       <div class="font-bold flex justify-between inputStyle items-center">
         <span class="text-xl text-slate-800">Get xlsx of All Paid users</span>
         <span class="p-3 rounded bg-slate-900 text-white"
-          ><a href="">Download document </a></span
+          ><a href="https://localhost:44361/api/Members/query?query=Paid" download
+            >Download document
+          </a></span
         >
       </div>
       <div class="font-bold flex justify-between inputStyle items-center">
         <span class="text-xl text-slate-800">Get xlsx of All Free users</span>
         <span class="p-3 rounded bg-slate-900 text-white"
-          ><a href="">Download document </a></span
+          ><a href="https://localhost:44361/api/Members/query?query=Free" download
+            >Download document
+          </a></span
         >
       </div>
       <div class="font-bold flex justify-between inputStyle items-center">
         <span class="text-xl text-slate-800">Get xlsx of Un-Paid users</span>
         <span class="p-3 rounded bg-slate-900 text-white"
-          ><a href="https://llcapi.herokuapp.com/api/Members/query?query=Free" download
+          ><a href="https://localhost:44361/api/Members/query?query=Un-Paid" download
             >Download document
           </a></span
         >
@@ -26,13 +30,25 @@
       <div class="font-bold flex justify-between inputStyle items-center">
         <span class="text-xl text-slate-800">Get xlsx of All Virtual users</span>
         <span class="p-3 rounded bg-slate-900 text-white"
-          ><a href="">Download document </a></span
+          ><a href="https://localhost:44361/api/Members/query?query=Virtual" download
+            >Download document
+          </a></span
         >
       </div>
       <div class="font-bold flex justify-between inputStyle items-center">
         <span class="text-xl text-slate-800">Get xlsx of All Physical users</span>
         <span class="p-3 rounded bg-slate-900 text-white"
-          ><a href="">Download document </a></span
+          ><a href="https://localhost:44361/api/Members/query?query=Physical" download
+            >Download document
+          </a></span
+        >
+      </div>
+      <div class="font-bold flex justify-between inputStyle items-center">
+        <span class="text-xl text-slate-800">Get xlsx of All users</span>
+        <span class="p-3 rounded bg-slate-900 text-white"
+          ><a href="https://localhost:44361/api/Members/query?query=All" download
+            >Download document
+          </a></span
         >
       </div>
     </div>
