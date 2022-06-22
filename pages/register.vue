@@ -53,12 +53,15 @@ const initialValues = {
   attendanceDate: "free",
 };
 const showModal = ref(false);
+const loading = ref(false);
 const modalMessages = reactive({
   header: "",
   message: "",
+  email: "",
 });
 function changeModal() {
   showModal.value = !showModal.value;
+  loading.value = false;
 }
 
 async function sendToDb(val) {
@@ -66,28 +69,37 @@ async function sendToDb(val) {
     Accept: "application/json",
     "Content-Type": "application/json",
   };
-  await fetch("https://llcapi.herokuapp.com/api/Members", {
-    method: "POST",
-    body: JSON.stringify(val),
-    headers: headers,
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      // if (data.message == "Success") {
-      //   window.location.href = data.url;
-      // }
-      showModal.value = true;
-      modalMessages.header = data.response;
-      modalMessages.message = data.message;
-    });
+  try {
+    await fetch("https://llcapi.herokuapp.com/api/Members", {
+      method: "POST",
+      body: JSON.stringify(val),
+      headers: headers,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // if (data.message == "Success") {
+        //   window.location.href = data.url;
+        // }
+        modalMessages.header = data.response;
+        modalMessages.message = data.message;
+        modalMessages.email = val.email;
+        showModal.value = true;
+        loading.value = false;
+      });
+  } catch (error) {
+    showModal.value = true;
+    modalMessages.header = "Error Registering";
+    modalMessages.message = error.message;
+    loading.value = true;
+  }
 }
 
 const handleSubmit = (values, actions) => {
+  loading.value = true;
   values.attendanceDate = attendanceDates.value;
   values.appearance = appearances.value == "Physical" ? true : false;
   values.appearanceType = appearances.value;
   values.title = titles.value;
-  console.log(values);
 
   sendToDb(values);
   //actions.resetForm();
@@ -102,6 +114,7 @@ const handleSubmit = (values, actions) => {
       @changeModal="changeModal"
       :header="modalMessages.header"
       :message="modalMessages.message"
+      :email="modalMessages.email"
     />
   </div>
   <div
@@ -261,11 +274,11 @@ const handleSubmit = (values, actions) => {
         <div class="flex items-center justify-center">
           <button
             :class="{ 'opacity-100': formMeta.valid }"
-            :disabled="!formMeta.valid"
+            :disabled="!formMeta.valid || loading"
             type="submit"
             class="btn i96"
           >
-            Submit
+            {{ loading ? "Please wait .." : "Submit" }}
           </button>
         </div>
 

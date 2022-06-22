@@ -457,10 +457,10 @@ onMounted(() => {
           </p>
           <hr />
           <span class="font-bold flex flex-col gap-2 mt-2">
-            <span>CECILIA BOLAJI DADA</span>
+            <span>Cecilia Bolaji Dada</span>
             <span>Ade Ayeyemi</span>
-            <!-- Jumoke Adenowo <br /> -->
-            <span>YEMI ADEDEJI</span>
+            <span>Victor Gbenga Afolabi</span>
+            <span>Yemi Adedeji</span>
           </span>
 
           <!-- <div class="flex gap-4 transition-all duration-200 ease-in-out">

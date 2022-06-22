@@ -8,6 +8,10 @@ const props = defineProps({
     type: String,
     default: "",
   },
+  email: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 
@@ -50,6 +54,18 @@ const props = defineProps({
             ><br />
             Account Number: <span class="font-bold">1771664775</span><br />
             Bank: <span class="font-bold">Polaris Bank Limited</span>
+          </span>
+          <span v-else-if="header == 'Already-Exist'">
+            This email address: {{ email }} has registered for the Lagos Leadership
+            Conference 2022. Please check your email(Inbox and spam) for event
+            information. For further enquires, please contact us at:
+            enquire@llconference.com or llconf2099@gmail.com
+          </span>
+          <span v-else-if="header == 'Welcome'">
+            You have successfully registered for the Lagos Leadership Conference 2022.
+            Please check your email(Inbox and spam) for event information. For further
+            enquires, please contact us at: enquire@llconference.com or
+            llconf2099@gmail.com
           </span>
           <span v-else>
             {{ message }}
