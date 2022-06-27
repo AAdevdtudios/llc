@@ -225,7 +225,7 @@ function counters() {
 }
 
 onMounted(() => {
-  console.log();
+  //console.log();
   counters();
 });
 </script>

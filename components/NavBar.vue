@@ -135,9 +135,6 @@ useHead({
     class: "test",
   },
 });
-function testSys() {
-  console.log("Run shit");
-}
 let tags = ["about", "speakers", "schedule", "faq", "photos", "register"];
 
 const currentSection = ref(null);

@@ -58,14 +58,12 @@ const props = defineProps({
           <span v-else-if="header == 'Already-Exist'">
             This email address: {{ email }} has registered for the Lagos Leadership
             Conference 2022. Please check your email(Inbox and spam) for event
-            information. For further enquires, please contact us at:
-            enquire@llconference.com or llconf2099@gmail.com
+            information. For further enquires, please contact us at: llconf2099@gmail.com
           </span>
           <span v-else-if="header == 'Welcome'">
             You have successfully registered for the Lagos Leadership Conference 2022.
             Please check your email(Inbox and spam) for event information. For further
-            enquires, please contact us at: enquire@llconference.com or
-            llconf2099@gmail.com
+            enquires, please contact us at: llconf2099@gmail.com
           </span>
           <span v-else>
             {{ message }}
