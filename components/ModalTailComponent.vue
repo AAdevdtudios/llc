@@ -44,7 +44,7 @@ const props = defineProps({
           <span v-if="header == 'Not-Paid'">
             Good Day,<br />
             Thank you for registering for the Lagos Leadership conference 2022 with theme
-            ‘Leading in season of Darkness & Confussion’. <br />If you are yet to make
+            ‘Leading in season of Darkness & Confusion’. <br />If you are yet to make
             payment, kindly pay your participation fee so we can reserve your spot. The
             scheduled Fees are show below: <br />
             Virtual Fee: N3,000.00 (Three Thousand Naira Only) <br />
