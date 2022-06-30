@@ -437,7 +437,7 @@ onMounted(() => {
           <p class="font-bold">
             <span class="text-xl">FRIDAY JULY 8, 2022</span><br />
             <span class="text-3xl text-red-700 font-bold font-Open-Sans tracking-wide"
-              >CHRUCH LEADERS SUMMIT</span
+              >CHURCH LEADERS SUMMIT</span
             ><br />
             <span class="text-xl mb-2">SPEAKERS</span> <br />
           </p>
