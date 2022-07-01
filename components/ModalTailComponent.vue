@@ -12,12 +12,12 @@ const props = defineProps({
     type: String,
     default: "",
   },
-  Fname: {
+  fname: {
     type: String,
     default: "",
   },
   amount: {
-    type: int,
+    type: String,
     default: "",
   },
 });
@@ -50,9 +50,14 @@ const props = defineProps({
       <div class="relative p-6 flex-auto">
         <p class="my-4 text-slate-500 text-xl leading-relaxed">
           <span v-if="header == 'Not-Paid'">
-            Dear {{ Fname }}, thank you for completing the LLC2022 Registration. Please
-            find below the event details. i. July 8, 2022 – Church Leaders Summit ii. July
-            9, 2022 – Interactive roundtable discussion You are required to pay
+            Dear {{ fname }},
+            <br />
+            Thank you for completing the LLC2022 Registration. Please find below the event
+            details.
+            <br />
+            i. July 8, 2022 – Church Leaders Summit
+            <br />
+            ii. July 9, 2022 – Interactive roundtable discussion You are required to pay
             {{ amount }} . See account details below for transfer.
             <br />
             Account Name:
@@ -60,17 +65,18 @@ const props = defineProps({
             Account Number: <span class="font-bold">1771664775</span><br />
             Bank: <span class="font-bold">Polaris Bank Limited</span>
             <br />
+            <br />
+            <br />
             Thank you <br />
-            For: LLC 2022 Organizing Committee Regards,
+            From: LLC 2022 Organizing Committee Regards,
           </span>
           <span v-else-if="header == 'Already-Exist'">
-            Dear {{ Fname }}, thank your for completing the LLC2022 Registration. Event
+            Dear {{ fname }}, thank your for completing the LLC2022 Registration. Event
             and Payment Details will be sent to {{ email }}.
           </span>
           <span v-else-if="header == 'Welcome'">
-            You have successfully registered for the Lagos Leadership Conference 2022.
-            Please check your email(Inbox and spam) for event information. For further
-            enquires, please contact us at: llconf2099@gmail.com
+            Dear {{ fname }}, thank your for completing the LLC2022 Registration. Event
+            and Payment Details will be sent to {{ email }}.
           </span>
           <span v-else>
             {{ message }}

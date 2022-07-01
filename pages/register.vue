@@ -58,8 +58,8 @@ const modalMessages = reactive({
   header: "",
   message: "",
   email: "",
-  FName: "",
-  amount: 0,
+  fname: "",
+  amount: "",
 });
 function changeModal() {
   showModal.value = !showModal.value;
@@ -72,7 +72,7 @@ async function sendToDb(val) {
     "Content-Type": "application/json",
   };
   try {
-    await fetch("https://llcapi.herokuapp.com/api/Members", {
+    await fetch("https://localhost:44361/api/Members", {
       method: "POST",
       body: JSON.stringify(val),
       headers: headers,
@@ -84,9 +84,9 @@ async function sendToDb(val) {
         // }
         modalMessages.header = data.response;
         modalMessages.message = data.message;
-        modalMessages.email = data.Email;
-        modalMessages.FName = data.FName;
-        modalMessages.amount = data.Amount;
+        modalMessages.email = data.email;
+        modalMessages.fname = data.fName;
+        modalMessages.amount = data.amount;
         showModal.value = true;
         loading.value = false;
       });
@@ -120,7 +120,7 @@ const handleSubmit = (values, actions) => {
       :message="modalMessages.message"
       :email="modalMessages.email"
       :amount="modalMessages.amount"
-      :fname="modalMessages.FName"
+      :fname="modalMessages.fname"
     />
   </div>
   <div
