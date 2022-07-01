@@ -72,7 +72,7 @@ async function sendToDb(val) {
     "Content-Type": "application/json",
   };
   try {
-    await fetch("https://localhost:44361/api/Members", {
+    await fetch("https://llcapi.herokuapp.com/api/Members", {
       method: "POST",
       body: JSON.stringify(val),
       headers: headers,
