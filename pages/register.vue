@@ -58,6 +58,8 @@ const modalMessages = reactive({
   header: "",
   message: "",
   email: "",
+  FName: "",
+  amount: 0,
 });
 function changeModal() {
   showModal.value = !showModal.value;
@@ -82,7 +84,9 @@ async function sendToDb(val) {
         // }
         modalMessages.header = data.response;
         modalMessages.message = data.message;
-        modalMessages.email = val.email;
+        modalMessages.email = data.Email;
+        modalMessages.FName = data.FName;
+        modalMessages.amount = data.Amount;
         showModal.value = true;
         loading.value = false;
       });
@@ -115,6 +119,8 @@ const handleSubmit = (values, actions) => {
       :header="modalMessages.header"
       :message="modalMessages.message"
       :email="modalMessages.email"
+      :amount="modalMessages.amount"
+      :fname="modalMessages.FName"
     />
   </div>
   <div

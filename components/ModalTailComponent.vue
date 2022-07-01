@@ -12,6 +12,14 @@ const props = defineProps({
     type: String,
     default: "",
   },
+  Fname: {
+    type: String,
+    default: "",
+  },
+  amount: {
+    type: int,
+    default: "",
+  },
 });
 </script>
 
@@ -42,23 +50,22 @@ const props = defineProps({
       <div class="relative p-6 flex-auto">
         <p class="my-4 text-slate-500 text-xl leading-relaxed">
           <span v-if="header == 'Not-Paid'">
-            Good Day,<br />
-            Thank you for registering for the Lagos Leadership conference 2022 with theme
-            ‘Leading in season of Darkness & Confusion’. <br />If you are yet to make
-            payment, kindly pay your participation fee so we can reserve your spot. The
-            scheduled Fees are show below: <br />
-            Virtual Fee: N3,000.00 (Three Thousand Naira Only) <br />
-            Onsite (Physical) Fee: N5,000.00 (Five Thousand Naira Only) <br />All payments
-            should be made to the following account:<br />
-            Account Name: <span class="font-bold">Bonmenabari Leadership Limited</span
-            ><br />
+            Dear {{ Fname }}, thank you for completing the LLC2022 Registration. Please
+            find below the event details. i. July 8, 2022 – Church Leaders Summit ii. July
+            9, 2022 – Interactive roundtable discussion You are required to pay
+            {{ amount }} . See account details below for transfer.
+            <br />
+            Account Name:
+            <span class="font-bold">Bonmenabari Leadership Limited</span><br />
             Account Number: <span class="font-bold">1771664775</span><br />
             Bank: <span class="font-bold">Polaris Bank Limited</span>
+            <br />
+            Thank you <br />
+            For: LLC 2022 Organizing Committee Regards,
           </span>
           <span v-else-if="header == 'Already-Exist'">
-            This email address: {{ email }} has registered for the Lagos Leadership
-            Conference 2022. Please check your email(Inbox and spam) for event
-            information. For further enquires, please contact us at: llconf2099@gmail.com
+            Dear {{ Fname }}, thank your for completing the LLC2022 Registration. Event
+            and Payment Details will be sent to {{ email }}.
           </span>
           <span v-else-if="header == 'Welcome'">
             You have successfully registered for the Lagos Leadership Conference 2022.
