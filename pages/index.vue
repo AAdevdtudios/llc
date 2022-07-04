@@ -22,7 +22,7 @@ let faqs = reactive([
   {
     id: 1,
     question: "What is included in my ticket ?",
-    content: "Your ticket covers both brake-fast and launch.",
+    content: "Your ticket covers both Breakfast and Lunch.",
     active: false,
   },
   {
