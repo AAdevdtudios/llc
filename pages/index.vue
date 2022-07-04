@@ -16,13 +16,13 @@ let faqs = reactive([
     id: 1,
     question: "What is the price of the ticket ?",
     content:
-      "Day 1- July 8 is totally free and Day 2- July 9 on virtual is 3000 while Physical is 5000 ",
+      "Day 1- July-8th-2022 is totally free and Day 2- July-9th-2022 on virtual is N3000 while Physical is N5000 ",
     active: true,
   },
   {
     id: 1,
     question: "What is included in my ticket ?",
-    content: "Your ticket covers both Breakfast and Lunch.",
+    content: "Your ticket covers Lunch for onsite participants.",
     active: false,
   },
   {
