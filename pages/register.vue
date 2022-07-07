@@ -64,6 +64,7 @@ const modalMessages = reactive({
 function changeModal() {
   showModal.value = !showModal.value;
   loading.value = false;
+  window.location.href = "/";
 }
 
 async function sendToDb(val) {
